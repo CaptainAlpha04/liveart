@@ -1,3 +1,5 @@
+Designed by Ali Imran and Saad Khan.
+
 # LiveArt Implementation Plan
 
 > **For agentic workers:** Execute task-by-task. Code belongs in source files, not this plan. Reference the spec at [2026-04-18-liveart-design.md](../specs/2026-04-18-liveart-design.md) for all API shapes, schemas, architecture, and ML details.
