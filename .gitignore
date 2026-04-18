@@ -1,0 +1,74 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# PyTorch model weights (large, regenerable via scripts/download_models.py)
+*.pth
+!.gitkeep
+
+# Node / frontend build artifacts
+node_modules/
+dist/
+build/
+frontend/dist/
+frontend/.vite/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# LiveArt-specific paths
+backend/uploads/*
+!backend/uploads/.gitkeep
+backend/models/*.pth
+backend/trained_models/*.pth
+
+# Training data (COCO etc.) — never commit
+data/
+
+# Download cache for pretrained model bundles
+.cache/
+
+# Claude Code workspace state
+.claude/
+
+# User-trained style artifacts (weights are gitignored above, drop the
+# adjacent metadata too so we don't ship orphan entries)
+backend/trained_models/*
+!backend/trained_models/.gitkeep
+
+# Per-user thumbnails for styles that aren't part of the shipped library.
+# The 10 canonical style thumbnails are tracked explicitly below.
+backend/thumbnails/*
+!backend/thumbnails/.gitkeep
+!backend/thumbnails/starry_night.jpg
+!backend/thumbnails/the_scream.jpg
+!backend/thumbnails/great_wave.jpg
+!backend/thumbnails/composition_viii.jpg
+!backend/thumbnails/udnie.jpg
+!backend/thumbnails/la_muse.jpg
+!backend/thumbnails/mosaic.jpg
+!backend/thumbnails/candy.jpg
+!backend/thumbnails/feathers.jpg
+!backend/thumbnails/rain_princess.jpg
