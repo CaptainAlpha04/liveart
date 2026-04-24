@@ -1,10 +1,10 @@
 # LiveArt
 
-Real-time Neural Style Transfer for webcam and video — apply the aesthetic of famous artworks to live video with near-zero perceived latency. Pick a style from a curated library of 10 pre-trained models, or train your own from a single reference image and watch the loss curves converge live.
+Real-time Neural Style Transfer for webcam and video — apply the aesthetic of famous artworks to live video with near-zero perceived latency. Pick a style from a curated library of 7 pre-trained models, or train your own from a single reference image and watch the loss curves converge live.
 
 ## Features
 
-- 10 pre-trained styles (Starry Night, The Scream, The Great Wave, Composition VIII, and more)
+- 7 pre-trained styles (Starry Night, The Scream, The Great Wave, Composition VIII, and more)
 - Live webcam stylization over WebSockets with target end-to-end latency of 15–40 ms
 - Video file processing — upload any MP4/MOV, stylize every frame at native resolution, download the result
 - Custom style training with live loss graphs (content, style, total) streamed over WebSocket
@@ -14,7 +14,7 @@ Real-time Neural Style Transfer for webcam and video — apply the aesthetic of 
 
 | Layer     | Tool                                                   |
 | --------- | ------------------------------------------------------ |
-| Backend   | FastAPI + Uvicorn (Python 3.10+)                       |
+| Backend   | FastAPI + Uvicorn (Python 3.7+)                       |
 | ML        | PyTorch 2.2+, torchvision, VGG-19 perceptual loss      |
 | Video I/O | OpenCV, Pillow                                         |
 | Transport | WebSockets (streaming) + REST (discrete operations)    |
@@ -25,9 +25,9 @@ Real-time Neural Style Transfer for webcam and video — apply the aesthetic of 
 
 ## Prerequisites
 
-- Python 3.10+
+- Python 3.7+
 - Node.js 18+
-- (Optional) CUDA-capable GPU — CPU works but is ~10x slower
+- (Optional) CUDA-capable GPU — CPU works but is ~7x slower
 - (Optional, for training) COCO 2014 Train images (~13 GB) — required only if you want to train new custom styles
 
 ## Quickstart (one command)
@@ -64,7 +64,7 @@ pip install -r requirements.txt
 python scripts/download_models.py
 ```
 
-This downloads the 4 styles bundled by the official `pytorch/examples` release (`mosaic`, `candy`, `rain_princess`, `udnie`) into `backend/models/`, writes metadata JSON for all 10 styles, and generates placeholder thumbnails in `backend/thumbnails/`. The remaining 6 styles (`starry_night`, `the_scream`, `la_muse`, `feathers`, `great_wave`, `composition_viii`) can be trained via the UI.
+This downloads the 4 styles bundled by the official `pytorch/examples` release (`mosaic`, `candy`, `rain_princess`, `udnie`) into `backend/models/`, writes metadata JSON for all 7 styles, and generates placeholder thumbnails in `backend/thumbnails/`. The remaining 6 styles (`starry_night`, `the_scream`, `la_muse`, `feathers`, `great_wave`, `composition_viii`) can be trained via the UI.
 
 **3. Install frontend dependencies**
 
